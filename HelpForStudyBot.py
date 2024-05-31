@@ -1,4 +1,3 @@
-#brodcast inviare messaggio a tutti gli utenti che hanno interagito con il bot
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler, CallbackContext
 from typing import Set
