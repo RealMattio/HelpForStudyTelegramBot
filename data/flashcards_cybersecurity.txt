@@ -1,0 +1,90 @@
+Capitolo 1: Introduzione
+
+Argomento 1: contesto storico dei rischi per la sicurezza informatica
+Parole chiave: World Economic Forum, globale, rischi, sicurezza informatica, fallimento
+Argomento 2: Aspetti fondamentali della sicurezza informatica
+Parole chiave: riservatezza, disponibilità, integrità, attacchi, informazioni
+Capitolo 2: Sicurezza delle informazioni
+
+Argomento 1: Principi di sicurezza delle informazioni
+Parole chiave: riservatezza, integrità, disponibilità, sicurezza fin dalla progettazione, gestione del rischio
+Argomento 2: Identità digitale e autenticazione
+Parole chiave: autenticazione, autorizzazione, identità digitale, certificati, fiducia
+Capitolo 3: Analisi del rischio
+
+Argomento 1: Processo di gestione del rischio
+Parole chiave: identificazione del rischio, analisi del rischio, valutazione del rischio, trattamento del rischio, accettazione del rischio
+Argomento 2: Analisi delle minacce e delle vulnerabilità
+Parole chiave: minacce, vulnerabilità, risorsa, impatto, probabilità
+Capitolo 4: Crittografia
+
+Argomento 1: Crittografia classica e moderna
+Parole chiave: crittografia, decrittografia, sostituzione, trasposizione, chiave
+Argomento 2: Crittografia a chiave pubblica
+Parole chiave: chiave pubblica, chiave privata, firma digitale, riservatezza, autenticazione
+Capitolo 5: Le Minacce
+
+Argomento 1: Attacchi ransomware
+Parole chiave: ransomware, crittografia, esfiltrazione di dati, estorsione, ciclo di vita dell'attacco
+Argomento 2: Risposta agli incidenti di sicurezza informatica
+Parole chiave: risposta all’incidente, preparazione, contenimento, eradicazione, ripristino
+Capitolo 6: Limiti, rischi e vulnerabilità delle IA
+
+Argomento 1: L'intelligenza artificiale come minaccia
+Parole chiave: sicurezza dell'IA, intelligenza artificiale dannosa, intelligenza artificiale antagonista, vulnerabilità dell'IA, rischi dell'IA
+Argomento 2: Vulnerabilità dei sistemi di intelligenza artificiale
+Parole chiave: data-avvelenamento, esempi contraddittori, robustezza del modello, privacy dei dati, backdoor
+Capitolo 7: Sicurezza dei sistemi industriali
+
+Argomento 1: Sicurezza del sistema di controllo industriale (ICS).
+Parole chiave: sicurezza OT, sicurezza ICS, SCADA, spionaggio industriale, disponibilità
+Argomento 2: Protezione multistrato per sistemi industriali
+Parole chiave: difesa in profondità, segmentazione della rete, firewall, rilevamento delle intrusioni, controllo degli accessi
+Capitolo 8: Introduzione alla parte applicativa
+
+Argomento 1: Tipi di aggressori informatici
+Parole chiave: criminali informatici, attori sponsorizzati dallo stato, hacktivisti, script kiddie
+Argomento 2: Fughe di dati e violazioni
+Parole chiave: fuga di dati, violazione dei dati, sicurezza delle password, esfiltrazione di dati, informazioni sensibili
+Capitolo 9: Lo stack ISO/OSI
+
+Argomento 1: Livelli del modello OSI
+Parole chiave: applicazione, presentazione, sessione, trasporto, rete, collegamento dati, fisico
+Argomento 2: Protocolli di comunicazione di rete
+Parole chiave: TCP, IP, HTTP, DNS, routing
+Capitolo 10: Livello di Rete - Livello 3
+
+Argomento 1: Indirizzamento IP e sottoreti
+Parole chiave: indirizzo IP, maschera di sottorete, indirizzo di rete, indirizzo di trasmissione, notazione CIDR
+Argomento 2: Instradamento e inoltro
+Parole chiave: router, tabella di instradamento, gateway predefinito, hop, inoltro di pacchetti
+Capitolo 11: Livello di Trasporto - Livello 4
+
+Argomento 1: TCP (protocollo di controllo della trasmissione)
+Parole chiave: affidabile, orientato alla connessione, controllo del flusso, controllo degli errori, segmentazione
+Argomento 2: porte e socket
+Parole chiave: numero di porta, socket, porte conosciute, connessione TCP, endpoint di comunicazione
+Capitolo 12: Firewall
+
+Argomento 1: Funzionalità del firewall
+Parole chiave: regole firewall, filtraggio dei pacchetti, sicurezza di rete, controllo degli accessi, stateful inflation
+Argomento 2: Distribuzione del firewall
+Parole chiave: perimetro di rete, DMZ, prevenzione delle intrusioni, monitoraggio del traffico, policy di sicurezza
+Capitolo 14: Il Web
+
+Argomento 1: Sistema dei nomi di dominio (DNS)
+Parole chiave: nome di dominio, indirizzo IP, name server, risoluzione DNS, record DNS
+Argomento 2: HTTP e sicurezza web
+Parole chiave: HTTP, HTTPS, server web, client web, cookie
+Capitolo 15: Sistemi embedded e IoT
+
+Argomento 1: Protocollo Modbus in ambienti industriali
+Parole chiave: Modbus, comunicazione industriale, SCADA, PLC, automazione
+Argomento 2: Considerazioni sulla sicurezza per l'IoT industriale
+Parole chiave: sicurezza IoT, autenticazione dei dispositivi, integrità dei dati, segmentazione della rete, comunicazione sicura
+Capitolo 16: Vulnerabilità del software
+
+Argomento 1: Vulnerabilità ed exploit del software
+Parole chiave: vulnerabilità del software, exploit, code injection, buffer overflow, cross-site scripting
+Argomento 2: CVE (vulnerabilità ed esposizioni comuni)
+Parole chiave: ID CVE, database delle vulnerabilità, avvisi di sicurezza, patch software, gestione delle vulnerabilità

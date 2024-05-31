@@ -1,0 +1,57 @@
+Quali sono le tre proprietà fondamentali della sicurezza delle informazioni e come si collegano alla valutazione dei rischi durante un attacco informatico?
+Spiegare la differenza tra i principi della "need-to-know" e del "need-to-know" nella sicurezza informatica.
+Dare la definizione di autenticazione in un contesto tecnico e dire in cosa differisce dalla definizione legale?
+Qual è lo scopo dei test CAPTCHA e quali sono alcuni dei loro limiti e sfide nel distinguere gli esseri umani dai robot?
+Descrivere il concetto di "zero trust" nella sicurezza informatica e discuterne vantaggi e svantaggi.
+Spiegare lo stack ISO/OSI?
+Qual è il compito e di cosa si occupa il livello 3 dello stack ISO/OSI?
+Spiegare quali sono le tipologie di routing e dire come funzionano.
+Spiegare il protocollo IP e le tipologie di indirizzamento che prevede.
+Quale è lo scopo del livello 4 dello stack ISO/OSI e quali servizi offre?
+Come si può garantire il trasferimento affidabile dei dati?
+Cos'è il TCP e come funziona?
+Cos'è l'UDP e come funziona?
+Quali sono i quattro modi per trattare il rischio e quali fattori dovrebbero essere considerati quando si sceglie una strategia di trattamento del rischio?
+Qual è la differenza tra l’analisi del rischio quantitativa e qualitativa e quando potrebbe essere più appropriato un approccio semiquantitativo?
+Spiegare lo scopo e il significato del sistema CVE (Common Vulnerabilities and Exposures) nella sicurezza informatica.
+Cos’è il SQL injection e in che modo la comprensione di questo concetto può migliorare le misure di sicurezza informatica?
+Qual è il significato dell'affermazione "L'unico sistema sicuro è quello che non è connesso ad alcuna rete, chiuso in un caveau rinforzato, con una guardia armata alla porta e... spento!"?
+Come si definisce il concetto di sicurezza ad un asintoto in termini di costo ed efficacia?
+Quali sono i tre fattori per verificare l'identità di un soggetto e come possono essere combinati per una maggiore sicurezza?
+Spiegare la differenza tra "insecurity-by-design" e altre debolezze tecniche nella sicurezza informatica.
+Quali sono i principali vantaggi della crittografia a chiave pubblica rispetto alla crittografia convenzionale?
+Spiegare l’importanza di comprendere il contesto dei rischi legati alla sicurezza informatica.
+Quali fattori contribuiscono alla tendenza delle persone a sottovalutare o sovrastimare determinati rischi?
+Perché un approccio formale e metodologico alla gestione del rischio è spesso preferito rispetto agli approcci informali?
+Qual è la differenza tra evitare e mitigare il rischio nel contesto del trattamento del rischio?
+Qual è lo scopo di una matrice di rischio e in che modo aiuta a stabilire la priorità dei rischi?
+Quali sono le differenze chiave tra l'approccio strategico e quello tattico alla crittografia?
+Che cos'è un "cifrario polialfabetico" e in che modo migliora la sicurezza dei cifrari a sostituzione più semplici?
+Perché il cifrario Vernam è considerato teoricamente perfetto e quali sfide pratiche ne limitano l’uso diffuso?
+Spiegare il concetto di "security trough obscurity" e perché è generalmente considerata una misura di sicurezza insufficiente?
+Quali sono alcuni potenziali svantaggi o vulnerabilità dei sistemi di crittografia a chiave pubblica (PKC)?
+Che cos'è la "crittografia omomorfica" e perché sta guadagnando rilevanza nel contesto del cloud computing?
+Spiegare la differenza tra attacchi passivi e attivi nella sicurezza informatica.
+Che cos'è una "botnet" e come può essere utilizzata per sferrare attacchi informatici su larga scala?
+Qual è la differenza tra un "data leak" e un "data breach"?
+Qual è il ruolo di un "gateway" nei sistemi di controllo industriale, in particolare nel contesto del protocollo Modbus?
+Cos'è un firewall e qual è il suo scopo?
+Spiegare quali sono e come funzionano i dispositivi di protezione di una rete.
+Quali sono le tre tipologie di firewall e come funzionano?
+Quali sono i target che si possono specificare in una regola di un firewall, come funzionano e in cosa differiscono?
+Come funziona un firewall stateful?
+Spiegare co'è il protocollo ICMP e dire che tipi di messaggi può generare.
+Cos'è il protocollo ARP e a cosa serve?
+Quali sono le vulnerabilità fornite dal protocollo ARP e a che tipi di attacchi espone?
+Cos'è il NAT e che problema cerca di risolvere?
+Quali sono le configurazioni di NAT che si possono implementare?
+Quali sono i limiti del NAT?
+Come funziona un DNS, a cosa serve e che procedure utilizza?
+In che modo il DNS può essere utilizzato con fine malevolo?
+Cos'è un attacco DDoS e in che modo si collega al DNS?
+Cos'è l'URL e come è strutturato?
+Spiegare il protocollo HTTP e a cosa serve?
+Da quali messaggi è composta una sessione HTTP?
+Quali sono i metodi di richiesta e i codici di stato del protocollo HTTP?
+Quali sono le differenze tra le tre versioni di HTTP?
+Cosa sono i cookie e a che servono?
