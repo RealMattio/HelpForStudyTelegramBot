@@ -58,7 +58,7 @@ def start(update: Update, context: CallbackContext) -> None:
                                 '   - Posso fornirti delle flashcards con un argomento e delle parole chiave per aiutarti a ripetere\n'
                                 'Usa il comando /cosapuoifare se vuoi che ti ridica cosa posso fare per te\n'
                                 'Usa il comando /info per maggiori informazioni.\n'
-                                f'\nBuono studio {emoji.emojize(':smiling_face_with_sunglasses:')}')
+                                f"\nBuono studio {emoji.emojize(':smiling_face_with_sunglasses:')}")
 
 def echo(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
@@ -157,7 +157,7 @@ def whatcanudo(update: Update, context: CallbackContext):
                                 '   - Posso fornirti delle flashcards con un argomento e delle parole chiave per aiutarti a ripetere\n'
                                 'Usa il comando /cosapuoifare se vuoi che ti ridica cosa posso fare per te\n'
                                 'Usa il comando /info per maggiori informazioni.\n'
-                                f'\nBuono studio {emoji.emojize(':smiling_face_with_sunglasses:')}')
+                                f"\nBuono studio {emoji.emojize(':smiling_face_with_sunglasses:')}")
 
 def info(update: Update, context: CallbackContext):
     update.message.reply_text('Bot realizzato da @RealMattio\nSe ci sono errori nelle domande o vuoi contribuire aggiungendone tu alcune contattalo quì su Telegram.')
@@ -174,6 +174,7 @@ def main():
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
     dp.add_handler(CommandHandler("iniziaStudio", choose_subject))
     dp.add_handler(CommandHandler("cosapuoifare", whatcanudo))
+    dp.add_handler(CommandHandler("info", info))
     dp.add_handler(CallbackQueryHandler(button))
 
     # Start the Bot
