@@ -12,7 +12,6 @@ NICKNAMES_FILE = 'nicknames.json'
 with open('token_file.txt', 'r') as f:
     BOT_TOKEN = f.readlines()[0]
 
-QUESTIONS = []
 # Read the question file
 
 # Load the set of users who have ever interacted with the bot
@@ -40,16 +39,12 @@ def save_nicknames(nicknames: list) -> None:
         json.dump(nicknames, f)
 
 
-users = load_users()
-nicknames = load_nicknames()
-
-
 def start(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     users.add(chat_id)
-    if update.message.from_user.username not in [people['nickname'] for people in nicknames]:
-        nicknames.append({'chat_id':chat_id, 'nickname':update.message.from_user.username})
-        save_nicknames(nicknames)
+    if update.message.chat_id not in [people['chat_id'] for people in nicknames]:
+        nicknames.append({'chat_id':chat_id, 'nickname':update.message.from_user.username, "subject": "", "questions": [], "flashcards": []})
+    save_nicknames(nicknames)
     save_users(users)
     update.message.reply_text(f'Ciao {update.message.from_user.username}! Sono il bot che ti aiuterà a preparare gli esami.\n'
                                 '\nUsa il comando /iniziaStudio per scegliere una materia e iniziare a studiare.\n'
@@ -82,20 +77,31 @@ def choose_subject(update: Update, context: CallbackContext) -> None:
         update.message.reply_text(text="Scegli una materia da studiare", reply_markup=reply_markup)
 
 def set_subject(update: Update, sub:str) -> None:
-    global QUESTIONS
     # add subject code to this if statement specifing the path where the .txt with questions is if you want to add a subject to this bot
     if sub == 'CS':
         #change the path where the questions are stored   
         with open('data/domande_cybersecurity_it.txt', 'r', encoding='utf-8') as f:
-            QUESTIONS = f.read().splitlines()
+            for people in nicknames:
+                if people['chat_id'] == update.callback_query.message.chat_id:
+                    people['subject'] = "CS"
+                    people['questions'] = f.read().splitlines()
+                    save_nicknames(nicknames)
             choose_mode(update)
     elif sub == 'ITD':    
         with open('data/domande_itd_it.txt', 'r', encoding='utf-8') as f:
-            QUESTIONS = f.read().splitlines()
+            for people in nicknames:
+                if people['chat_id'] == update.callback_query.message.chat_id:
+                    people['subject'] = "ITD"
+                    people['questions'] = f.read().splitlines()
+                    save_nicknames(nicknames)
             choose_mode(update)
     elif sub == 'FIA':    
         with open('data/domande_fia_it.txt', 'r', encoding='utf-8') as f:
-            QUESTIONS = f.read().splitlines()
+            for people in nicknames:
+                if people['chat_id'] == update.callback_query.message.chat_id:
+                    people['subject'] = "FIA"
+                    people['questions'] = f.read().splitlines()
+                    save_nicknames(nicknames)
             choose_mode(update)
 
 def choose_mode(update: Update) -> None:
@@ -113,9 +119,13 @@ def choose_mode(update: Update) -> None:
     
 
 def button(update: Update, context: CallbackContext) -> None:
-    global QUESTIONS
     query = update.callback_query
     query.answer()
+    #get the list of questions from the user who clicked the button
+    for people in nicknames:
+        if people['chat_id'] == query.message.chat_id:
+            QUESTIONS = people['questions']
+    #if there are no questions loaded and the user doesn't want to change subject, ask the user to choose a subject
     if QUESTIONS == [] and query.data != 'CS' and query.data != 'ITD' and query.data != 'FIA':    
         choose_subject(update, context)
     #add subject in this elif when you wnat to add a subject to your bot
@@ -134,6 +144,11 @@ def button(update: Update, context: CallbackContext) -> None:
         
 
 def get_question(update: Update, query) -> None:
+    #get the list of questions from the user who clicked the button
+    for people in nicknames:
+        if people['chat_id'] == query.message.chat_id:
+            QUESTIONS = people['questions']
+    # rewrite previous rows as a list comprehension
     question = random.choice(QUESTIONS)
     keyboard_question = [
         [InlineKeyboardButton("Nuova domanda", callback_data='question')],
@@ -161,6 +176,9 @@ def whatcanudo(update: Update, context: CallbackContext):
 
 def info(update: Update, context: CallbackContext):
     update.message.reply_text('Bot realizzato da @RealMattio\nSe ci sono errori nelle domande o vuoi contribuire aggiungendone tu alcune contattalo quì su Telegram.')
+
+users = load_users()
+nicknames = load_nicknames()
 
 def main():
     # Replace 'BOT_TOKEN' with your bot's token
