@@ -5,12 +5,13 @@ from typing import Set
 import os
 import json
 import random
+import emoji
 
 USERS_FILE = 'users.json'
 NICKNAMES_FILE = 'nicknames.json'
 #read bot token from file
 with open('token_file.txt', 'r') as f:
-    BOT_TOKEN = f.readlines()
+    BOT_TOKEN = f.readlines()[0]
 
 # Read the question file
 with open('data/domande_cybersecurity_it.txt', 'r', encoding='utf-8') as f:
@@ -70,8 +71,12 @@ def scegli(update: Update, context: CallbackContext) -> None:
     ]
     
     reply_markup = InlineKeyboardMarkup(keyboard)
+    #if the function is called by a callback query, edit the message else reply with a new message
+    if update.callback_query:
+        update.callback_query.edit_message_text(text="Scegli una modalità di studio", reply_markup=reply_markup)
+    else:
+        update.message.reply_text(text="Scegli una modalità di studio", reply_markup=reply_markup)
     
-    update.message.reply_text('Scegli cosa vuoi:', reply_markup=reply_markup)
 
 def button(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
@@ -97,7 +102,11 @@ def get_question(update: Update, query) -> None:
 
 def get_flashcard(update: Update, query) -> None:
     # send a message to the user
-    query.edit_message_text(text="Flashcard mode is not implemented yet. Sorry :( ")
+    keyboard_question = [
+        [InlineKeyboardButton("Indietro", callback_data='scegli')]
+        ]
+    reply_markup = InlineKeyboardMarkup(keyboard_question)
+    query.edit_message_text(text=f"Mi dispiace le flashcard ancora non sono state implementate! {emoji.emojize(':slightly_frowning_face:')}", reply_markup= reply_markup)
 
 
 def main():
