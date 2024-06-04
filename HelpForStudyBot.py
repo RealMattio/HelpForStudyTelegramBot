@@ -122,9 +122,7 @@ def button(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     query.answer()
     #get the list of questions from the user who clicked the button
-    for people in nicknames:
-        if people['chat_id'] == query.message.chat_id:
-            QUESTIONS = people['questions']
+    QUESTIONS = [people['questions'] for people in nicknames if people['chat_id'] == query.message.chat_id][0]
     #if there are no questions loaded and the user doesn't want to change subject, ask the user to choose a subject
     if QUESTIONS == [] and query.data != 'CS' and query.data != 'ITD' and query.data != 'FIA':    
         choose_subject(update, context)
@@ -145,10 +143,7 @@ def button(update: Update, context: CallbackContext) -> None:
 
 def get_question(update: Update, query) -> None:
     #get the list of questions from the user who clicked the button
-    for people in nicknames:
-        if people['chat_id'] == query.message.chat_id:
-            QUESTIONS = people['questions']
-    # rewrite previous rows as a list comprehension
+    QUESTIONS = [people['questions'] for people in nicknames if people['chat_id'] == query.message.chat_id][0]
     question = random.choice(QUESTIONS)
     keyboard_question = [
         [InlineKeyboardButton("Nuova domanda", callback_data='question')],
