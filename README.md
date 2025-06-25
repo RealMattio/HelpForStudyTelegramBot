@@ -60,7 +60,7 @@ echo "123456:ABC-DEF..." > token_file.txt
 ```
 ```bash
 # 4) Avvia il bot
-python HelpForStudyBot.py
+python HelpForStudyTelegramBot.py
 ```
 
 Il bot partirà in modalità polling. Scrivigli `/start` su Telegram,
